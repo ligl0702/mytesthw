@@ -1,11 +1,11 @@
-name: Start build ssr+  aarch64_generic by wk
+名字: Start build ssr+  aarch64_generic by wk
 
 on:
  workflow_dispatch:
  
-jobs:
+作业:
   build:
-    name: Test ${{ matrix.arch }}
+    名字: Test ${{ matrix.arch }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -18,13 +18,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Determine branch name
+      - 名字: Determine branch name
         run: |
           BRANCH="master"
           echo "Building for $BRANCH"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
-      - name: Determine changed packages
+      - 名字: Determine changed packages
         run: |
           # only detect packages with changes
           PKG_ROOTS=$(find . -name Makefile | \
